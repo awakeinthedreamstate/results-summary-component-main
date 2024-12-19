@@ -33,7 +33,7 @@ Users should be able to:
 
 [![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/awakeinthedreamstate/results-summary-component-main) [![github-pages](https://img.shields.io/badge/github_pages-000000?style=for-the-badge&logo=github-pages&logoColor=white)](https://awakeinthedreamstate.github.io/results-summary-component-main/) [![frontend-mentor](https://img.shields.io/badge/frontend_mentor-0A66C2?style=for-the-badge&logo=github&logoColor=white)](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV)
 
-## ⚙ Tech Stack
+### ⚙ Tech Stack
 
 - HTML5
 - CSS
