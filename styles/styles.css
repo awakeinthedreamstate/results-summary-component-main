@@ -153,6 +153,12 @@ select {
   font-weight: 500;
   color: white;
 }
+.result-summary-card button:hover {
+  background: linear-gradient(hsl(200, 100%, 67%), hsl(241, 81%, 54%));
+}
+.result-summary-card button:focus {
+  border: 2px solid rgb(11, 218, 233);
+}
 @media (max-width: 400px) {
   .result-summary-card button {
     width: 85%;
@@ -160,6 +166,12 @@ select {
     margin-top: 10px;
     background: hsl(224, 30%, 27%);
     font-size: 1rem;
+  }
+  .result-summary-card button:hover {
+    background: hsl(224, 30%, 27%);
+  }
+  .result-summary-card button:focus {
+    border: 2px solid rgb(0, 0, 0);
   }
 }
 

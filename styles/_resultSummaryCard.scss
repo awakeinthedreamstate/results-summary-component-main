@@ -12,7 +12,11 @@ $mobileViewWidth: 400px;
 
 $fontColor2: hsl(221, 100%, 96%, 80%);
 $fontColor3: hsl(224, 30%, 27%);
-$buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+@mixin buttonColor($colorValue) {
+  background: linear-gradient(hsl($colorValue, 100%, 67%), hsl(241, 81%, 54%));
+}
+// $buttonColor: linear-gradient(hsl(253, 100%, 67%), hsl(241, 81%, 54%));
 
 @mixin flexCenter {
   display: flex;
@@ -73,7 +77,7 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   button {
     position: relative;
     top: 50px;
-    background: $buttonColor;
+    @include buttonColor(252);
     border: none;
     width: 75%;
     height: 3em;
@@ -81,12 +85,24 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     font-size: 0.8rem;
     font-weight: 500;
     color: white;
+    &:hover {
+      @include buttonColor(200);
+    }
+    &:focus {
+      border: 2px solid rgb(11, 218, 233);
+    }
     @media (max-width: $mobileViewWidth) {
       width: $summaryCardContentMobileWidth;
       height: 3rem;
       margin-top: 10px;
       background: $fontColor3;
       font-size: 1rem;
+      &:hover {
+        background: $fontColor3;
+      }
+      &:focus {
+        border: 2px solid rgb(0, 0, 0);
+      }
     }
   }
 }
