@@ -77,7 +77,7 @@ $fontColor3: hsl(224, 30%, 27%);
   button {
     position: relative;
     top: 50px;
-    @include buttonColor(252);
+    background: $fontColor3;
     border: none;
     width: 75%;
     height: 3em;
@@ -86,7 +86,7 @@ $fontColor3: hsl(224, 30%, 27%);
     font-weight: 500;
     color: white;
     &:hover {
-      @include buttonColor(200);
+      @include buttonColor(252);
     }
     &:focus {
       border: 2px solid rgb(11, 218, 233);

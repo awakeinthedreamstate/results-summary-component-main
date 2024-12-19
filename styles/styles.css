@@ -144,7 +144,7 @@ select {
 .result-summary-card button {
   position: relative;
   top: 50px;
-  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background: hsl(224, 30%, 27%);
   border: none;
   width: 75%;
   height: 3em;
@@ -154,7 +154,7 @@ select {
   color: white;
 }
 .result-summary-card button:hover {
-  background: linear-gradient(hsl(200, 100%, 67%), hsl(241, 81%, 54%));
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 .result-summary-card button:focus {
   border: 2px solid rgb(11, 218, 233);
