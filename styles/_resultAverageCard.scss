@@ -1,6 +1,7 @@
 $fontColor1: hsl(0, 0%, 100%);
 $fontColor2: hsl(221, 100%, 96%, 80%);
 $fontColor3: hsl(224, 30%, 27%);
+$mobileViewWidth: 400px;
 $averageScoreCardColor: linear-gradient(
   hsl(252, 100%, 67%),
   hsl(241, 81%, 54%)
@@ -37,7 +38,7 @@ $averageScoreDimpleColor: linear-gradient(
     color: $fontColor2;
     font-size: 1rem;
     font-weight: 500;
-    @media (max-width: 360px) {
+    @media (max-width: $mobileViewWidth) {
       font-size: 1rem;
     }
   }
@@ -50,7 +51,7 @@ $averageScoreDimpleColor: linear-gradient(
     line-height: 0.98rem;
     font-weight: 400;
     color: $fontColor2;
-    @media (max-width: 360px) {
+    @media (max-width: $mobileViewWidth) {
       width: 70%;
       font-size: 0.9rem;
     }

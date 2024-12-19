@@ -183,15 +183,18 @@ select {
   width: 100%;
   border-radius: 5px;
 }
+#result-summary-list div .score-label {
+  width: 40%;
+}
 #result-summary-list div .score {
-  position: absolute;
-  left: 112px;
+  position: relative;
+  right: -10%;
   color: hsl(224, 30%, 27%);
 }
 @media (max-width: 400px) {
   #result-summary-list div .score {
-    position: absolute;
-    left: 232px;
+    position: relative;
+    right: -17%;
     color: hsl(224, 30%, 27%);
   }
 }
@@ -272,7 +275,7 @@ select {
   font-size: 1rem;
   font-weight: 500;
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .average-score-card h3 {
     font-size: 1rem;
   }
@@ -287,7 +290,7 @@ select {
   font-weight: 400;
   color: hsla(221, 100%, 96%, 0.8);
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .average-score-card .score-comment {
     width: 70%;
     font-size: 0.9rem;
