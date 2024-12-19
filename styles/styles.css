@@ -1,0 +1,243 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Hanken Grotesk, sans-serif;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.results-card {
+  display: flex;
+  width: 500px;
+  height: 350px;
+  border-radius: 30px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.results-card .average-score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 30px;
+}
+.results-card .result-summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 30px;
+}
+.results-card .result-summary-card h3 {
+  width: 75%;
+  text-align: left;
+  position: relative;
+  top: 9px;
+  color: hsl(224, 30%, 27%);
+  font-size: 1rem;
+}
+.results-card .result-summary-card button {
+  position: relative;
+  top: 50px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border: none;
+  width: 75%;
+  height: 3em;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+#result-summary-list {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  top: 30px;
+}
+#result-summary-list div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 5px;
+}
+#result-summary-list div .score {
+  position: absolute;
+  left: 112px;
+  color: hsl(224, 30%, 27%);
+}
+#result-summary-list div .score-overall {
+  color: hsl(from hsl(224, 30%, 27%) h s l/60%);
+}
+#result-summary-list div span {
+  display: flex;
+  margin: 8px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+#result-summary-list div span img {
+  margin-right: 10px;
+  width: 15px;
+  height: auto;
+}
+
+#score-category1 {
+  background-color: hsl(from hsl(0, 100%, 67%) h s l/10%);
+}
+#score-category1 .score-label {
+  color: hsl(from hsl(0, 100%, 67%) h s l/100%);
+}
+
+#score-category2 {
+  background-color: hsl(from hsl(39, 100%, 56%) h s l/10%);
+}
+#score-category2 .score-label {
+  color: hsl(from hsl(39, 100%, 56%) h s l/100%);
+}
+
+#score-category3 {
+  background-color: hsl(from hsl(166, 100%, 37%) h s l/10%);
+}
+#score-category3 .score-label {
+  color: hsl(from hsl(166, 100%, 37%) h s l/100%);
+}
+
+#score-category4 {
+  background-color: hsl(from hsl(234, 85%, 45%) h s l/10%);
+}
+#score-category4 .score-label {
+  color: hsl(from hsl(234, 85%, 45%) h s l/100%);
+}
+
+.average-score-card {
+  justify-content: space-evenly;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(0, 0%, 100%);
+}
+.average-score-card .average-score-dimple {
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  border-radius: 100%;
+  background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border: none;
+}
+.average-score-card .average-score-dimple h1 {
+  font-size: 3rem;
+}
+.average-score-card .average-score-dimple p {
+  position: relative;
+  top: -15px;
+  font-size: 0.7rem;
+  color: hsla(221, 100%, 96%, 0.8);
+}
+.average-score-card h3 {
+  position: relative;
+  top: -7px;
+  color: hsla(221, 100%, 96%, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.average-score-card .score-comment {
+  text-align: center;
+  font-size: 0.8rem;
+  width: 75%;
+  position: relative;
+  top: -30px;
+  line-height: 0.98rem;
+  font-weight: 400;
+  color: hsla(221, 100%, 96%, 0.8);
+}
+.average-score-card .rating {
+  position: relative;
+  top: -20px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */

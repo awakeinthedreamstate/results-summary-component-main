@@ -1,0 +1,58 @@
+$fontColor1: hsl(0, 0%, 100%);
+$fontColor2: hsl(221, 100%, 96%, 80%);
+$fontColor3: hsl(224, 30%, 27%);
+$averageScoreCardColor: linear-gradient(
+  hsl(252, 100%, 67%),
+  hsl(241, 81%, 54%)
+);
+$averageScoreDimpleColor: linear-gradient(
+  hsla(256, 72%, 46%, 1),
+  hsla(241, 72%, 46%, 0)
+);
+.average-score-card {
+  justify-content: space-evenly;
+  background: $averageScoreCardColor;
+  color: hsl(0, 0%, 100%);
+  .average-score-dimple {
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    border-radius: 100%;
+    background: $averageScoreDimpleColor;
+    border: none;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      position: relative;
+      top: -15px;
+      font-size: 0.7rem;
+      color: $fontColor2;
+    }
+  }
+
+  h3 {
+    position: relative;
+    top: -7px;
+    color: $fontColor2;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .score-comment {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 75%;
+    position: relative;
+    top: -30px;
+    line-height: 0.98rem;
+    font-weight: 400;
+    color: $fontColor2;
+  }
+  .rating {
+    position: relative;
+    top: -20px;
+    font-weight: 600;
+    color: $fontColor1;
+    font-size: 1.5rem;
+  }
+}

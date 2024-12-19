@@ -11,6 +11,14 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>Frontend Mentor | Results summary component</title>
 
@@ -26,59 +34,41 @@
     </style>
   </head>
   <body>
-    <div>
-      <p>Your Result</p>
-      <div>
-        <h1 id="average-score"></h1>
-        <p>of 100</p>
+    <div class="results-card">
+      <div class="average-score-card">
+        <h3>Your Result</h3>
+        <div class="average-score-dimple">
+          <h1 id="average-score"></h1>
+          <p>of 100</p>
+        </div>
+        <h3 class="rating">Great</h3>
+        <p class="score-comment">
+          You scored higher than 65% of the people who have taken <br />
+          these tests.
+        </p>
       </div>
-      <h3>Great</h3>
-      <p>
-        You scored higher than 65% of the people who have taken these tests.
-      </p>
+      <div class="result-summary-card">
+        <h3>Summary</h3>
+        <div id="result-summary-list"></div>
+        <button type="button" class="button">Continue</button>
+      </div>
     </div>
-    <div>
-      <h3>Summary</h3>
-      <div id="result-summary-list"></div>
-      <button>Continue</button>
-    </div>
-    <div class="attribution">
+
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
     <script>
-      const resultsDiv = document.getElementById("result-summary-list");
+      const results = document.getElementById("result-summary-list");
       const averageScore = document.getElementById("average-score");
-      //   let scoreTotal = 0;
-      //   for (var i = 0; i < data.length; i++) {
-      //     let icon = data[i].icon;
-      //     let score = data[i].score;
-      //     let category = data[i].category;
-      //     let div = document.createElement("div");
-      //     div.innerHTML(
-      //       '<span><img src="' +
-      //         icon +
-      //         '" />' +
-      //         category +
-      //         "</span><span>" +
-      //         score +
-      //         "/100</span>"
-      //     );
-      //     document.getElementById("result-summary-list").appendChild(div);
-      //     scoreTotal += score;
-      //   }
-      // }
-
       async function getData() {
         try {
           const res = await fetch("data.json");
-
           if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);
           }
-
           const data = await res.json();
           displayData(data);
         } catch (error) {
@@ -93,15 +83,16 @@
           let score = data[i].score;
           let category = data[i].category;
           let div = document.createElement("div");
+          div.setAttribute("id", `score-category${i + 1}`);
           div.innerHTML =
-            '<span><img src="' +
+            '<span class="score-label"><img src="' +
             icon +
             '" /> ' +
             category +
-            "</span> <span>" +
+            "</span> <span class='score'>" +
             score +
-            "/100</span>";
-          resultsDiv.appendChild(div);
+            "</span><span class='score-overall'> / 100</span>";
+          results.appendChild(div);
           scoreTotal += score;
         }
         averageScore.innerHTML = (scoreTotal / data.length).toFixed(0);

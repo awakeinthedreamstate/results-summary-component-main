@@ -1,0 +1,9 @@
+@import "./reset";
+@import "./resultSummaryCard";
+@import "./resultAverageCard";
+
+body {
+  @include flexCenter();
+  justify-content: center;
+  margin: 0;
+}
