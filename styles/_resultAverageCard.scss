@@ -37,6 +37,9 @@ $averageScoreDimpleColor: linear-gradient(
     color: $fontColor2;
     font-size: 1rem;
     font-weight: 500;
+    @media (max-width: 360px) {
+      font-size: 1rem;
+    }
   }
   .score-comment {
     text-align: center;
@@ -47,6 +50,10 @@ $averageScoreDimpleColor: linear-gradient(
     line-height: 0.98rem;
     font-weight: 400;
     color: $fontColor2;
+    @media (max-width: 360px) {
+      width: 70%;
+      font-size: 0.9rem;
+    }
   }
   .rating {
     position: relative;

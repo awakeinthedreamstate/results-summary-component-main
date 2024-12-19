@@ -5,6 +5,9 @@ $scoreCategoryColors: (
   hsl(234, 85%, 45%)
 );
 
+$summaryCardContentMobileWidth: 85%;
+$summaryCardContentDesktopWidth: 75%;
+
 $fontColor2: hsl(221, 100%, 96%, 80%);
 $fontColor3: hsl(224, 30%, 27%);
 $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -21,38 +24,67 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   height: 350px;
   border-radius: 30px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 360px) {
+    flex-direction: column;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+  }
+
   .average-score-card {
     @include flexCenter();
     width: 50%;
     height: 100%;
     border-radius: 30px;
-  }
 
-  .result-summary-card {
-    @include flexCenter();
-
-    width: 50%;
-    height: 100%;
-    border-radius: 30px;
-    h3 {
-      width: 75%;
-      text-align: left;
-      position: relative;
-      top: 9px;
-      color: $fontColor3;
-      font-size: 1rem;
+    @media (max-width: 360px) {
+      width: 100%;
+      height: 40vh;
+      border-radius: 0 0 30px 30px;
     }
-    button {
+  }
+}
+.result-summary-card {
+  @include flexCenter();
+
+  width: 50%;
+  height: 100%;
+  border-radius: 30px;
+  @media (max-width: 360px) {
+    width: 100%;
+    height: 60vh;
+  }
+  h3 {
+    width: $summaryCardContentDesktopWidth;
+    text-align: left;
+    position: relative;
+    top: 9px;
+    color: $fontColor3;
+    font-size: 1rem;
+    @media (max-width: 360px) {
+      width: $summaryCardContentMobileWidth;
       position: relative;
-      top: 50px;
-      background: $buttonColor;
-      border: none;
-      width: 75%;
-      height: 3em;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: white;
+      top: 12px;
+    }
+  }
+  button {
+    position: relative;
+    top: 50px;
+    background: $buttonColor;
+    border: none;
+    width: 75%;
+    height: 3em;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    @media (max-width: 360px) {
+      width: $summaryCardContentMobileWidth;
+      height: 3rem;
+      margin-top: 10px;
+      background: $fontColor3;
+      font-size: 1rem;
     }
   }
 }
@@ -64,6 +96,10 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   gap: 0.75rem;
   position: relative;
   top: 30px;
+  @media (max-width: 360px) {
+    width: $summaryCardContentMobileWidth;
+    margin-top: 10px;
+  }
   div {
     display: flex;
     justify-content: space-between;
@@ -73,6 +109,11 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
       position: absolute;
       left: 112px;
       color: $fontColor3;
+      @media (max-width: 360px) {
+        position: absolute;
+        left: 232px;
+        color: $fontColor3;
+      }
     }
     .score-overall {
       color: hsl(from $fontColor3 h s l / 60%);
@@ -82,6 +123,9 @@ $buttonColor: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
       margin: 8px;
       font-size: 0.875rem;
       font-weight: bold;
+      @media (max-width: 360px) {
+        margin: 15px 8px;
+      }
       img {
         margin-right: 10px;
         width: 15px;
